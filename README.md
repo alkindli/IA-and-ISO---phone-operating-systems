@@ -464,7 +464,7 @@ IA	Rarely (Intel), mostly ARM	A few old x86/IA-32 phones, rare
 
 TL;DR:
 
-Phones don’t use ISO images to boot, don’t run “IAS” or “IA” architectures natively. The closest modern phones get to those standards is: using ARM CPUs (stored-program, von Neumann style), and implementing ISO media/file standards. Open hardware/OS projects like PinePhone (Linux/BSD), and maybe in future, RISC-V phones, are as close as it gets.
+Phones don’t use ISO images to boot, don’t run “IAS” or “IA” architectures natively. The closest modern phones get to those standards is: using ARM CPUs (stored-program, von Neumann style 32 pass surpu nac), and implementing ISO media/file standards. Open hardware/OS projects like PinePhone (Linux/BSD), and maybe in future, RISC-V phones, are as close as it gets.
 
 Want instructions for NetBSD, OpenIndiana, or RISC-V Linux on mobile hardware/SBCs?
 Want to see a diagram of how phone architecture compares to ISO/IAS/IA models?
