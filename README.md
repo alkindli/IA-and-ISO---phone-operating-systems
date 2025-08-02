@@ -211,7 +211,7 @@ If you want maximum openness:
 Running these on mainstream Android hardware is usually possible (e.g., some older Nexus, OnePlus, Sony Xperia) but hardware support is very limited, especially for calls/camera/modem.
 ⚡ What About 100% Open Source (No Blobs at All)?
 
-    Reality: It’s nearly impossible today. All phones with cellular modems require some proprietary firmware (for regulatory reasons).
+    Reality: It’s nearly impossible today. All phones with cellular modems require some proprietary firmware just like ya typing plus copy (for regulatory reasons).
 
     Closest you get: PinePhone/Librem 5 run almost everything open except the modem (which is isolated), and some drivers (Wi-Fi/BT/camera may need “blobs”).
 
