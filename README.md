@@ -354,3 +354,120 @@ References and Links
     Plan 9 ARM
 
 If you want to experiment with BSD or illumos on real hardware, I can give you starting guides, images, or source links. Just ask for your target hardware or what kind of “UNIX” experience you want!
+
+
+
+Great, let’s map those terms (ISO, IAS, IA) to phones and mobile OS/hardware context, and see what’s real, what’s theoretical, and what’s in active use.
+1. ISO (in Phone Context)
+a) ISO Images on Phones
+
+    Not native to phones—phones do not boot from ISO images like PCs.
+
+    You cannot flash a phone OS from an ISO file. Phone OSes use special images (e.g., .img, .zip, or vendor-specific).
+
+    Exception: Some emulators or VM apps on Android (like Limbo, QEMU, UTM) can mount ISO files to emulate x86 OSes, but this is not how phones actually boot.
+
+b) ISO Standards in Mobile
+
+    Many underlying standards for media, text, encoding on phones are ISO (JPEG, MP3, ISO 8859-1, etc.).
+
+    No phone runs "ISO OS."
+
+2. IAS (in Phone Context)
+a) Internet Authentication Service (IAS)
+
+    Not part of phone OS—IAS is a Windows Server thing (RADIUS authentication for enterprise networks).
+
+    Phones connect to IAS/NPS servers (e.g., for enterprise Wi-Fi), but do not run IAS.
+
+b) IAS Machine (Architecture)
+
+    Phones do not use IAS machine/von Neumann architecture directly, but all modern CPUs (including ARM in phones) are descendants of the von Neumann architecture.
+
+    IAS as a reference: All smartphones have a CPU that is a “stored-program computer” in the von Neumann sense (instructions and data in memory).
+
+3. IA (in Phone Context)
+a) Intel Architecture (IA)
+
+    IA-32 (x86): Almost no phones use x86; only a handful of rare Intel Atom devices (ASUS Zenfone, etc.).
+
+    IA-64 (Itanium): Never in phones.
+
+    Phones are overwhelmingly ARM architecture, not Intel “IA”.
+
+b) Information Architecture
+
+    Applies at the app and UX layer (e.g., mobile apps and sites are designed with IA in mind), but not a hardware/software standard.
+
+4. So, Are There Any "ISO, IAS, IA"-Class Architectures or OSes for Phones?
+The closest matches:
+
+    Phones are “IAS-like” at the architecture level (von Neumann stored-program computers, just as PCs).
+
+    Phones use ISO standards everywhere (media, encoding, security, etc.), but not as bootable OS images.
+
+    Phones do not use IA (Intel) architectures except for rare exceptions.
+
+    Phones do not run IAS software; they just connect to those services.
+
+5. What About Mobile OS Images, Boot, and Architecture?
+a) Flashing/Booting
+
+    No ISOs: Phones use boot/recovery images (boot.img, recovery.img, .tar, .zip), not ISO.
+
+    No UEFI/BIOS in classic sense; instead, vendor-specific bootloaders (LK, U-Boot, fastboot, etc.).
+
+b) CPU Architecture
+
+    ARMv7, ARMv8 (AArch64), RISC-V (early stage) dominate phones.
+
+    Very rarely, x86/IA-32.
+
+6. Closest Open Architectures to Your Ask
+
+If you want an open, standard, well-documented architecture for phones (like the dream of “ISO/IA-style” for mobile):
+
+    RISC-V is the only open ISA gaining momentum.
+
+        Few phones use it yet, but Linux and experimental OSes run on RISC-V dev boards.
+
+        No mainstream RISC-V phone yet, but it's the “open, standards-based” hope for the future.
+
+7. Summary Table: Mapping ISO, IAS, IA to Phones
+Term	How/If Used on Phones	Example/Context
+ISO	Standards (media/text), NOT OS	JPEG, MP3, ISO-8859, but NOT ISO OS
+IAS	Underlying architecture concept	Von Neumann, but not as OS or service
+IA	Rarely (Intel), mostly ARM	A few old x86/IA-32 phones, rare
+8. If You Want “Real UNIX, ISO/IAS/IA-Like” on Phones:
+
+    No phone runs a true “ISO/IAS/IA” OS.
+
+    Closest are:
+
+        ARM phones with Linux (postmarketOS, Mobian, etc.).
+
+        BSD on PinePhone (NetBSD/FreeBSD).
+
+        RISC-V dev boards with Linux/BSD for mobile.
+
+    No Solaris or “PC-standards” phone OS in daily use.
+
+9. How to Experiment/DIY:
+
+    If you want to build or test an OS for phone on PC standards:
+
+        Try running postmarketOS, Mobian, NetBSD/ARM, or OpenIndiana/ARM on SBCs (e.g., Raspberry Pi, PinePhone).
+
+        Use QEMU/UTM/Limbo to run ISO images (desktop OS) in emulation on a phone for fun/hacking, but this isn’t native or practical.
+
+        Follow RISC-V phone efforts for future fully open mobile hardware.
+
+TL;DR:
+
+Phones don’t use ISO images to boot, don’t run “IAS” or “IA” architectures natively. The closest modern phones get to those standards is: using ARM CPUs (stored-program, von Neumann style), and implementing ISO media/file standards. Open hardware/OS projects like PinePhone (Linux/BSD), and maybe in future, RISC-V phones, are as close as it gets.
+
+Want instructions for NetBSD, OpenIndiana, or RISC-V Linux on mobile hardware/SBCs?
+Want to see a diagram of how phone architecture compares to ISO/IAS/IA models?
+Just ask for a focused deep dive!
+
+ -    Code of conduct +
